@@ -1,0 +1,13 @@
+**/.*
+**/webpack.config.js
+**/webpack.example.js
+**/tsconfig.json
+**/tsconfig.webpack.json
+**/node_modules
+downstream_projects
+logo
+src
+scripts
+example
+build
+_doc

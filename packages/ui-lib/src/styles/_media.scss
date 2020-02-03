@@ -1,0 +1,66 @@
+/* Portrait phones and smaller */
+$ts-ma-screen-xxs-min-width: 320px;
+$ts-ma-screen-xxs-max-width: 479px;
+
+/* Landscape phones and portrait tablets */
+$ts-ma-screen-xs-min-width: 480px;
+$ts-ma-screen-xs-max-width: 767px;
+
+/* Portrait tablets and small desktops */
+$ts-ma-screen-sm-min-width: 768px;
+$ts-ma-screen-sm-max-width: 991px;
+
+/* Landscape tablets and medium desktops */
+$ts-ma-screen-md-min-width: 992px;
+$ts-ma-screen-md-max-width: 1199px;
+
+/* Large desktops and laptops */
+$ts-ma-screen-lg-min-width: 1200px;
+
+$ts-ma-screen-sm-min-height: 720px;
+$ts-ma-screen-md-min-height: 900px;
+
+/*
+  Media Breakpoints.
+  Example below showing the padding and font-size increasing
+  once the viewport gets over 1024px:
+    site-header {
+      padding: 2rem;
+      font-size: 1.8rem;
+      @include mq('tablet-wide') {
+        padding-top: 4rem;
+        font-size: 2.4rem;
+      }
+    }
+*/
+
+$breakpoints: (
+  'phone': 400px,
+  'small-iphone': 420px,
+  'phone-wide': 480px,
+  'phablet': 560px,
+  'tablet-small': 640px,
+  'tablet': 768px,
+  'tablet-wide': 992px,
+  'tablet-ipad-wide': 1024px,
+  'desktop': 1248px,
+  'desktop-wide': 1440px,
+);
+@mixin mq($width, $type: min) {
+  @if map_has_key($breakpoints, $width) {
+    $width: map_get($breakpoints, $width);
+    @if $type == max {
+      $width: $width - 1px;
+    }
+    @media only screen and (#{$type}-width: $width) {
+      @content;
+    }
+  }
+}
+
+@mixin webkit-smooth-scroll() {
+  -webkit-overflow-scrolling: auto;
+  @include mq('tablet', max) {
+    -webkit-overflow-scrolling: touch;
+  }
+}

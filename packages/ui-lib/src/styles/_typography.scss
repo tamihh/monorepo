@@ -1,0 +1,192 @@
+@import '_spacing.scss';
+@import '_colors.scss';
+
+$ts-tp-font-primary: 'Helvetica Neue', Arial, sans-serif;
+$ts-tp-font-secondary: serif;
+
+/* Mobile Font Family */
+$ts-tp-mobile-font-regular: 'ProximaNova-Regular', $ts-tp-font-primary;
+$ts-tp-mobile-font-bold: 'ProximaNova-Bold', $ts-tp-font-primary;
+$ts-tp-mobile-font-black: 'ProximaNova-Black', $ts-tp-font-primary;
+$ts-tp-mobile-font-medium: 'ProximaNova-Medium', $ts-tp-font-primary;
+
+/* set base values */
+$ts-tp-text-base-size: 13px; //13px 0.813em 81.3% 10pt
+
+/* Font Sizes */
+$ts-tp-xxxs-font-size: 8px;
+$ts-tp-xxs-font-size: 10px;
+$ts-tp-xs-font-size: 12px;
+$ts-tp-sm-font-size: 14px;
+$ts-tp-md-font-size: 16px;
+$ts-tp-lg-font-size: 18px;
+$ts-tp-xl-font-size: 24px;
+$ts-tp-xxl-font-size: 30px;
+$ts-tp-xxxl-font-size: 36px;
+$ts-tp-lg-m-font-size: 20px;
+
+/* Mobile Font Sizes */
+$ts-tp-mobile-lg-font-size: 22px;
+$ts-tp-mobile-xl-font-size: 26px;
+
+/* line-height */
+$ts-tp-heading-line-height: 1.2;
+$ts-tp-body-line-height: 1.5;
+$ts-tp-header-line-height: 1.1;
+$ts-tp-criteria-header-line-height: 16px;
+$ts-tp-drop-down-classic-line-height: 23px;
+$ts-tp-line-height-14: 14px;
+$ts-tp-line-height-17: 17px;
+$ts-tp-line-height-18: 18px;
+$ts-tp-line-height-20: 20px;
+$ts-tp-line-height-25: 25px;
+
+/* letter spacing */
+$ts-tp-relevant-trip-list-line-height: 21px;
+
+@mixin base-text {
+  font-family: $ts-tp-font-primary;
+  color: $ts-cl-black-lighten-1;
+  font-size: $ts-tp-text-base-size;
+
+  &.light-text,
+  .light-text {
+    color: $ts-cl-gray-darken-2;
+  }
+
+  &.super-light-text,
+  .super-light-text {
+    color: $ts-cl-gray-darken;
+  }
+
+  &.bold-text,
+  .bold-text {
+    font-weight: bold;
+  }
+
+  &.normal-text,
+  .normal-text {
+    font-size: $ts-tp-text-base-size;
+  }
+
+  &.medium-text,
+  .medium-text {
+    font-size: $ts-tp-text-base-size;
+  }
+
+  &.large-text,
+  .large-text {
+    font-size: $ts-tp-text-base-size;
+  }
+}
+
+@mixin input-text {
+  @include base-text();
+  font-size: $ts-tp-md-font-size;
+  color: $ts-cl-blue-lighten-2;
+}
+
+@mixin mobile-base-text {
+  font-family: $ts-tp-mobile-font-regular;
+  font-size: $ts-tp-xs-font-size;
+  color: $ts-cl-mobile-text;
+}
+
+@mixin mobile-medium-text {
+  font-family: $ts-tp-mobile-font-medium;
+  font-size: $ts-tp-xs-font-size;
+  color: $ts-cl-mobile-text;
+}
+
+@mixin mobile-bold-text {
+  font-family: $ts-tp-mobile-font-bold;
+  font-size: $ts-tp-xs-font-size;
+  color: $ts-cl-mobile-text;
+  font-weight: bold;
+}
+
+@mixin group-header-text {
+  font-family: $ts-tp-font-primary;
+  font-size: $ts-tp-sm-font-size;
+  line-height: $ts-tp-body-line-height;
+  color: $ts-cl-black-lighten-1;
+}
+
+@mixin drop-down-classic {
+  font-family: $ts-tp-font-primary;
+  font-size: $ts-tp-md-font-size;
+  line-height: $ts-tp-drop-down-classic-line-height;
+  color: $ts-cl-black-lighten-1;
+}
+
+@mixin sub-header-payment-page-text {
+  font-size: $ts-tp-lg-font-size;
+  font-family: $ts-tp-font-primary;
+  line-height: $ts-tp-relevant-trip-list-line-height;
+  color: $ts-cl-black-lighten-1;
+}
+
+@mixin mobile-label-text {
+  font-family: $ts-tp-mobile-font-regular;
+  font-size: $ts-tp-sm-font-size;
+  color: $ts-cl-mobile-text;
+}
+
+@mixin mobile-label-header {
+  font-family: $ts-tp-mobile-font-regular;
+  font-size: $ts-tp-md-font-size;
+  color: $ts-cl-mobile-text;
+}
+
+@mixin mobile-modal-title {
+  font-family: $ts-tp-mobile-font-bold;
+  font-size: $ts-tp-lg-m-font-size;
+  color: $ts-cl-blue;
+}
+
+@mixin desktop-label-text {
+  font-family: $ts-tp-font-primary;
+  font-size: $ts-tp-sm-font-size;
+  color: $ts-cl-mobile-text;
+}
+
+@mixin desktop-header-main-title {
+  font-family: $ts-tp-font-primary;
+  font-size: $ts-tp-lg-font-size;
+  color: $ts-cl-blue;
+}
+
+@mixin desktop-criteria-label-md {
+  font-family: $ts-tp-font-primary;
+  font-size: $ts-tp-lg-font-size;
+  line-height: $ts-tp-criteria-header-line-height;
+  color: $ts-cl-blue-darken-3;
+}
+
+@mixin desktop-criteria-label-sm {
+  font-family: $ts-tp-font-primary;
+  font-size: $ts-tp-xs-font-size;
+  line-height: $ts-tp-criteria-header-line-height;
+  color: $ts-cl-blue-darken-3;
+}
+
+@mixin mobile-dropdown-list {
+  font-family: $ts-tp-mobile-font-regular;
+  font-size: $ts-tp-md-font-size;
+  line-height: $ts-tp-drop-down-classic-line-height;
+  color: $ts-cl-mobile-text;
+}
+
+@mixin mobile-sapphire-radio-item-text {
+  font-family: $ts-tp-mobile-font-regular;
+  font-size: $ts-tp-md-font-size;
+  line-height: $ts-tp-relevant-trip-list-line-height;
+  color: $ts-cl-black-lighten-1;
+}
+
+@mixin desktop-radio-item-text {
+  font-family: $ts-tp-font-primary;
+  font-size: $ts-tp-sm-font-size;
+  line-height: $ts-tp-relevant-trip-list-line-height;
+  color: $ts-cl-black-lighten-1;
+}

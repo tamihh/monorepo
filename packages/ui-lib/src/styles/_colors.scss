@@ -1,0 +1,114 @@
+/* color proposal
+ the numbers indicate the color strenght, shorter name
+ only comments on main colors */
+$bcd-blue-1: #c9d0e6;
+$bcd-blue-2: #839de0;
+$bcd-blue-3: #6984c4;
+$bcd-blue-4: #5875c0; // BCD BLUE
+$bcd-blue-5: #3e74ba;
+$bcd-blue-6: #3477db;
+$bcd-blue-7: #141b50;
+
+$bcd-gray-1: #f8f8f8;
+$bcd-gray-2: #f0f0f1;
+$bcd-gray-3: #e2e2e3; // BCD GRAY
+$bcd-gray-4: #dad9dc;
+$bcd-gray-5: #c9c9c9;
+$bcd-gray-6: #b0b2b4;
+$bcd-gray-7: #a3a7ac;
+$bcd-gray-8: #979797;
+$bcd-gray-9: #626262;
+$bcd-gray-10: #c5c5c5;
+
+$bcd-red-1: #c6523f;
+$bcd-red-2: #da3016; // BCD RED
+$bcd-red-3: #da1d30;
+
+$bcd-orange-1: #fdf8ee;
+$bcd-orange-2: #f8d1ab;
+$bcd-orange-3: #f5a35f; // BCD ORANGE
+$bcd-orange-4: #e77e18;
+
+/* finished color proposal */
+
+$ts-cl-green-lighten-1: #9ede46;
+$ts-cl-green: #8dc63f;
+
+$ts-cl-blue-lighten-5: #ebeffb;
+$ts-cl-blue-lighten-4: #c9d0e6;
+$ts-cl-blue-lighten-3: #3e74ba;
+$ts-cl-blue-lighten-2: #839de0;
+$ts-cl-blue-lighten-1: #6984c4;
+$ts-cl-blue: #5875c0;
+$ts-cl-blue-darken: #5571b8;
+$ts-cl-blue-darken-1: rgb(23, 38, 86);
+$ts-cl-blue-darken-2: #3477db;
+$ts-cl-blue-darken-3: #1d2559;
+$ts-cl-blue-darken-4: #364f94;
+
+$ts-cl-white: #fff;
+$ts-cl-white-70: rgba(255, 255, 255, 0.7);
+
+$ts-cl-gray-lighten-0: #f8f8f8;
+$ts-cl-gray-lighten-1: #f1f1f1;
+$ts-cl-gray-lighten-2: #f2f2f2;
+$ts-cl-gray-lighten-3: #f0f0f1;
+$ts-cl-gray-lighten-4: #efefef;
+$ts-cl-gray: #e2e2e3;
+$ts-cl-gray-darken: #c9c9c9;
+$ts-cl-gray-darken-1: #b0b2b4;
+$ts-cl-gray-darken-2: #a3a7ac;
+$ts-cl-gray-darken-3: #626262;
+$ts-cl-gray-darken-4: #979797;
+$ts-cl-gray-darken-5: #D0D0D0;
+
+$ts-cl-black-lighten-1: #404040;
+$ts-cl-black: #000;
+$ts-cl-black_1: #250404;
+$ts-cl-black-60: rgba(0, 0, 0, 0.6);
+$ts-cl-black-80: rgba(0, 0, 0, 0.8);
+
+$ts-cl-red-lighten-3: #c6523f;
+$ts-cl-red-lighten-2: #fcf4f2;
+$ts-cl-red-lighten-1: #c55545;
+$ts-cl-red: #da3016;
+$ts-cl-red-secondary: #da1d30;
+
+$ts-cl-orange-lighten-2: #fdf8ee;
+$ts-cl-orange-lighten-1: #f8d1ab;
+$ts-cl-orange: #f5a35f;
+$ts-cl-orange-darken-1: #e77e18;
+
+$ts-cl-yellow: #e8a911;
+
+$ts-cl-btn-hover: rgba(158, 158, 158, 0.2);
+$ts-cl-btn-active: rgba(158, 158, 158, 0.3);
+
+// MOBILE COLOURS
+$ts-cl-mobile-text: #1a242f;
+
+$ts-cl-mobile-gray-lighten-1: #d8d8d8;
+$ts-cl-mobile-gray: #818181;
+
+/*
+// Font Colors
+//$color-text: #4f6c8d;
+//$color-text-light: #a3adb4;
+//$color-text-lighter: #ccd6e1;
+
+//$color-text-contrast: #ffffff;
+//$color-text-contrast-light: #a7b5c6;
+//$color-text-contrast-lighter: #5f5f63;
+
+//--color-text: var(--gray-10);
+//--color-text-heading: var(--black);
+//--color-text-subtle: var(--gray-6);
+//--color-link: var(--color-primary);
+//--color-link-visited: var(--color-primary-dark);
+
+
+// Background Colors
+
+
+// Auxiliary Colors
+*/

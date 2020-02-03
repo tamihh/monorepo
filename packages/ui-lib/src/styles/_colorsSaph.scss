@@ -1,0 +1,25 @@
+$primary-blue: #5875c0;
+$primary-blue-light: #5a88c6;
+$primary-blue-dark: #25245b;
+$primary-white: #fff;
+
+$secondary-blue: #364f94;
+$secondary-orange: #ff9301;
+$secondary-green: #54d426;
+$secondary-purple: #7b6ee1;
+$secondary-teal: #07b79e;
+$secondary-red: #da1d30;
+
+$tertiary-pale-grey: #f8f8f8;
+$tertiary-light-grey: #f0f0f1;
+$tertiary-light-med-grey: #d9d9db;
+$tertiary-med-grey: #d0d0d1;
+$tertiary-grey: #5e656d;
+$tertiary-black: #1a242f;
+
+$bcd-primary-brand-c: $primary-blue;
+
+@mixin background-opacity($color, $opacity: 0.3) {
+  background: $color; /* The Fallback */
+  background: rgba($color, $opacity);
+}

@@ -1,0 +1,29 @@
+@import "../../styles/colors";
+
+.click-effect {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+
+  pointer-events: none;
+  animation: ripple 0.8s ease-out;
+
+  background-color: $ts-cl-btn-active;
+
+  &.ripple-element-light {
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+}
+
+@keyframes ripple {
+  from {
+    opacity: 1;
+    transform: scale(0);
+  }
+
+  to {
+    opacity: 0;
+    transform: scale(2);
+  }
+}

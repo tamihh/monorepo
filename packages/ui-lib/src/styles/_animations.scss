@@ -1,0 +1,22 @@
+@import "../styles/colors";
+
+@mixin placeholderShimmer {
+  animation: placeholderShimmer 2s linear;
+  animation-iteration-count: infinite;
+  background-image: linear-gradient(
+    to right,
+    $ts-cl-gray-lighten-4 0,
+    $ts-cl-mobile-gray-lighten-1 30%,
+    $ts-cl-gray-lighten-4 50%
+  );
+  background-size: 1200px 100%;
+}
+
+@keyframes placeholderShimmer {
+  0% {
+    background-position: -1200px 0;
+  }
+  100% {
+    background-position: 1200px 0;
+  }
+}

@@ -1,0 +1,43 @@
+@import "colors.scss";
+
+$font-size-1: 26px;
+$font-size-2: 22px;
+$font-size-3: 20px;
+$font-size-4: 16px;
+$font-size-5: 14px;
+$font-size-6: 12px;
+$font-size-7: 9px;
+
+$card-radius-1: 32px;
+$card-radius-2: 22px;
+$card-radius-3: 5px;
+
+$ts-tp-font-primary: "Helvetica Neue", Arial, sans-serif;
+
+$ts-tp-mobile-font-regular: "ProximaNova-Regular", $ts-tp-font-primary;
+$ts-tp-mobile-font-bold: "ProximaNova-Bold", $ts-tp-font-primary;
+$ts-tp-mobile-font-black: "ProximaNova-Black", $ts-tp-font-primary;
+$ts-tp-mobile-font-medium: "ProximaNova-Medium", $ts-tp-font-primary;
+
+/*headers*/
+@mixin h1-text {
+  font-family: $ts-tp-mobile-font-black;
+  font-size: $font-size-1;
+  color: $tertiary-black;
+}
+
+@mixin h2-text {
+  font-family: $ts-tp-mobile-font-black;
+  font-size: $font-size-2;
+  color: $tertiary-black;
+}
+
+@mixin h2-caps-text {
+  font-family: $ts-tp-mobile-font-black;
+  font-size: $font-size-1;
+  color: $primary-blue;
+}
+
+@mixin rounded-icon {
+  border-radius: $card-radius-2;
+}

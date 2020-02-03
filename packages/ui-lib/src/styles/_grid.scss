@@ -1,0 +1,75 @@
+$ts-gd-gap-horizontal: 10px;
+$ts-gd-gap-vertical: $ts-gd-gap-horizontal;
+
+@mixin grid {
+  // fallback for IE
+  &::before,
+  &::after {
+    content: '';
+    display: table;
+  }
+
+  &::after {
+    clear: both;
+  }
+
+  > * {
+    float: left;
+    margin-right: $ts-gd-gap-horizontal;
+    margin-bottom: $ts-gd-gap-vertical;
+  }
+
+  @supports (grid-area: auto) {
+    //CSS Grid style
+    display: grid;
+    grid-column-gap: $ts-gd-gap-horizontal;
+    grid-row-gap: $ts-gd-gap-vertical;
+
+    &::after,
+    &::before {
+      content: none;
+    }
+
+    > * {
+      margin-right: 0;
+      margin-bottom: 0;
+    }
+  }
+}
+
+@function box-gap($boxes, $gap) {
+  $box: ();
+
+  @for $i from 1 through length($boxes) {
+    $box: append($box, nth($boxes, $i), space);
+
+    // add gap between
+    @if $gap > 0 {
+      @if $i != length($boxes) {
+        $box: append($box, $gap, space);
+      }
+    }
+  }
+
+  @return $box;
+}
+
+@mixin grid-columns($columns, $gap) {
+  grid-template-columns: $columns;
+  @if $gap > 0 {
+    grid-column-gap: $gap;
+  }
+
+  /* TODO: This is handled by autoprefixer - remove */
+  -ms-grid-columns: box-gap($columns, $gap);
+}
+
+@mixin grid-rows($rows, $gap) {
+  grid-template-rows: $rows;
+  @if $gap > 0 {
+    grid-row-gap: $gap;
+  }
+
+  /* TODO: This is handled by autoprefixer - remove */
+  -ms-grid-rows: box-gap($rows, $gap);
+}

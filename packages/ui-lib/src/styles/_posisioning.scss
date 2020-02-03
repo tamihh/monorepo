@@ -1,0 +1,80 @@
+
+/*
+  Shorthand mixin for centering.
+  @param {Boolean} $horizontal [null]  - If true center horizontal
+  @param {Boolean} $vertical [null] - If true center vertical
+*/
+@mixin ts-ps-centerer($horizontal: true, $vertical: true) {
+  position: absolute;
+  @if ($horizontal and $vertical) {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+  } @else if ($horizontal) {
+    left: 50%;
+    transform: translate(-50%, 0);
+    -webkit-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+  } @else if ($vertical) {
+    top: 50%;
+    transform: translate(0, -50%);
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+  }
+}
+
+/*
+  Shorthand mixin for offset positioning.
+  @param {String} $position - Either `relative`, `absolute` or `fixed`
+  @param {Length} $top [null] - Top offset
+  @param {Length} $right [null] - Right offset
+  @param {Length} $bottom [null] - Bottom offset
+  @param {Length} $left [null] - Left offset
+*/
+@mixin ts-ps-position($position, $top: null, $right: null, $bottom: null, $left: null) {
+  position: $position;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+/* Truncate element */
+@mixin ts-ps-truncate($truncation-boundary) {
+  max-width: $truncation-boundary;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/*
+  Shorthand mixin for absolute positioning.
+  Serves as an alias for `position(absolute, ...)`
+  @param {Arglist} $args - Offsets
+  @require {mixin} position
+*/
+@mixin ts-ps-absolute($args...) {
+  @include position(absolute, $args...);
+}
+
+/*
+  Shorthand mixin for relative positioning.
+  Serves as an alias for `position(relative, ...)`
+  @param {Arglist} $args - Offsets
+  @require {mixin} position
+*/
+@mixin ts-ps-relative($args...) {
+  @include position(relative, $args...);
+}
+
+/*
+  Shorthand mixin for fixed positioning.
+  Serves as an alias for `position(fixed, ...)`
+  @param {Arglist} $args - Offsets
+  @require {mixin} position
+*/
+@mixin ts-ps-fixed($args...) {
+  @include position(fixed, $args...);
+}

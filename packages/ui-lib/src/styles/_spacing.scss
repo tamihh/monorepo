@@ -1,0 +1,21 @@
+$ts-sp-space-unit:  16px;
+$ts-sp-space-xxs:   calc(0.25 * #{$ts-sp-space-unit}); // 4px
+$ts-sp-space-xs:    calc(0.5 * #{$ts-sp-space-unit}); // 8px
+$ts-sp-space-sm:    calc(0.75 * #{$ts-sp-space-unit}); // 12px
+$ts-sp-space-md:    calc(1.25 * #{$ts-sp-space-unit}); // 20px
+$ts-sp-space-lg:    calc(2 * #{$ts-sp-space-unit}); // 32px
+$ts-sp-space-xl:    calc(3.25 * #{$ts-sp-space-unit}); // 52px
+$ts-sp-space-xxl:   calc(5.25 * #{$ts-sp-space-unit}); // 84px
+
+$ts-sp-topbar-height: 56px;
+$ts-sp-footer-height: 62px;
+$ts-sp-footer-height-small-iphone: 89px;
+$ts-sp-footer-height-phone-wide: 79px;
+$ts-sp-footer-height-phone: 106px;
+
+@mixin padding($top: null, $right: null, $bottom: null, $left: null) {
+  padding: $top $right $bottom $left;
+}
+
+$ts-dm-mobile-height: 45px;
+$ts-dm-desktop-height: 56px;

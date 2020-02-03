@@ -1,0 +1,146 @@
+@import '../styles/spacing';
+@import '../styles/media';
+@import '../styles/colors';
+@import '../styles/typography';
+
+.ts-c-btn {
+  width: 100%;
+  min-width: 75px;
+  padding: 14px;
+  height: $ts-dm-mobile-height;
+
+  // ripple
+  position: relative;
+  overflow: hidden;
+
+  // no select
+  -webkit-user-select: none; /* Safari 3.1+ */
+  -moz-user-select: none; /* Firefox 2+ */
+  -ms-user-select: none; /* IE 10+ */
+  user-select: none; /* Standard syntax */
+
+  // flat
+  -webkit-appearance: none;
+  box-shadow: none;
+  border: 0;
+  border-radius: 25px;
+
+  @include mq('phone-wide', min) {
+    width: 100%;
+    border-radius: 0;
+    height: $ts-dm-desktop-height;
+    padding: $ts-sp-space-unit;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:disabled {
+    color: rgba(0, 0, 0, 0.26);
+    cursor: not-allowed;
+    background-color: transparent;
+    border: 1px solid $ts-cl-blue-lighten-1;
+  }
+
+  @include mq('tablet') {
+    &.ts-c-btn-primary-thin {
+      height: auto;
+      min-height: 44px;
+      padding: 11px;
+    }
+  }
+
+  &.ts-c-btn-primary,
+  &.ts-c-btn-primary-thin,
+  &.ts-c-btn-secondary {
+    span {
+      width: 100%;
+      font-family: $ts-tp-mobile-font-regular;
+      font-size: $ts-tp-md-font-size;
+      font-weight: bold;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 1;
+      letter-spacing: normal;
+      text-align: center;
+      color: $ts-cl-white;
+      display: inline-block;
+      outline: none;
+      white-space: nowrap;
+    }
+
+    @include mq('tablet') {
+      span {
+        font-family: $ts-tp-font-primary;
+        font-weight: normal;
+      }
+    }
+  }
+
+  &.ts-c-btn-primary,
+  &.ts-c-btn-primary-thin {
+    background: linear-gradient(90deg, #5a88c6 1.89%, #5875c0 98.11%);
+    color: $ts-cl-white;
+
+    @include mq('phone-wide') {
+      background: $ts-cl-green;
+    }
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+      background-color: $ts-cl-green-lighten-1;
+    }
+
+    &:disabled {
+      cursor: not-allowed;
+      background-color: transparent;
+      border: 1px solid $ts-cl-blue-lighten-1;
+    }
+  }
+
+  &.ts-c-btn-secondary {
+    background-color: $ts-cl-white;
+    border: solid 1px $ts-cl-mobile-gray-lighten-1;
+
+    span {
+      color: $ts-cl-blue-darken-2;
+    }
+  }
+
+  &.ts-c-btn-primary-blue {
+    background-color: $bcd-blue-4;
+
+    span {
+      color: $ts-cl-white;
+    }
+  }
+
+  &.ts-c-btn-tertiary {
+    border: solid 1px $ts-cl-blue;
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+      background-color: $ts-cl-white;
+      color: $ts-cl-blue;
+    }
+
+    span {
+      color: $ts-cl-blue;
+      font-size: $ts-tp-md-font-size;
+      width: 100%;
+      font-family: $ts-tp-font-primary;
+      font-weight: normal;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 1;
+      letter-spacing: normal;
+      text-align: center;
+      display: inline-block;
+      outline: none;
+      white-space: nowrap;
+    }
+  }
+}

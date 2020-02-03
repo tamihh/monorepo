@@ -1,0 +1,34 @@
+@import 'typography.scss';
+@import 'colorsSaph.scss';
+
+@mixin non-decimal-price {
+  font-size: $ts-tp-xl-font-size;
+  font-weight: bold;
+  white-space: nowrap;
+
+  @include mq('tablet', max) {
+    font-family: $ts-tp-mobile-font-bold;
+  }
+}
+
+@mixin decimal-price {
+  -webkit-transform: translate3d(0, -2px, 0);
+  transform: translate3d(1px, -8px, 0);
+  display: inline-block;
+  font-size: $ts-tp-xs-font-size;
+  font-weight: bold;
+}
+
+@mixin total {
+  font-size: $ts-tp-xs-font-size;
+  font-weight: bold;
+  transform: translate3d(-2px, -21px, 0);
+  display: inline-block;
+}
+
+@mixin currency {
+  font-size: $ts-tp-xs-font-size;
+  transform: translate3d(-26px, 0, 0);
+  display: inline-block;
+  font-weight: bold;
+}
