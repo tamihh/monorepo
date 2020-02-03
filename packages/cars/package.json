@@ -1,0 +1,38 @@
+{
+  "name": "@monorepo-poc/cars",
+  "version": "0.0.6",
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
+  "module": "lib-esm/index.js",
+  "license": "MIT",
+  "scripts": {
+    "clean": "shx rm -rf _bundles lib lib-esm build dist",
+    "compile": "tsc && tsc -m es6 --outDir lib-esm",
+    "bundle": "cross-env NODE_ENV=production webpack",
+    "build": "run-s clean compile bundle"
+  },
+  "peerDependencies": {
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
+  },
+  "description": "> TODO: description",
+  "author": "Tamiris <tamiris.simoneli@travelport.com>",
+  "homepage": "https://bitbucket.org/tamiris-simoneli/monorepo-poc#readme",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://tamiris-simoneli@bitbucket.org/tamiris-simoneli/monorepo-poc.git"
+  },
+  "dependencies": {
+    "react-intl": "^3.11.0"
+  }
+}
